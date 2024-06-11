@@ -1,0 +1,12 @@
+{
+  "name": "tictactoe-online-backend",
+  "version": "1.0.0",
+  "description": "Multiplayer Online Tic Tac Toe developed in Node.js (BackEnd)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Victor Hanszman",
+  "license": "ISC"
+}
