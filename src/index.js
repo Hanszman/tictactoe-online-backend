@@ -27,10 +27,9 @@ app.post('/signup', async (req, res) => {
 app.post('/login', async (req, res) => {
     try {
         const { username, password } = req.body;
-        const { users } = serverClient.queryUsers({ name: username });
-        if (users.length === 0) return res.status(404).json({ message: 'User not found' });
-        // const userId = uuidv4();
-        const token = serverClient.createToken(userId);
+        const { users } = await serverClient.queryUsers({ name: username });
+        if (users && users.length === 0) return res.status(404).json({ message: 'User not found' });
+        const token = serverClient.createToken(users[0].id);
         const passwordMatch = await bcrypt.compare(password, users[0].hashedPassword);
         if (passwordMatch) {
             res.status(201).json({
@@ -38,10 +37,10 @@ app.post('/login', async (req, res) => {
                 firstName: users[0].firstName,
                 lastName: users[0].lastName,
                 username,
-                userId: users[0].id,
+                userId: users[0].id
             })
         } else return res.status(404).json({ message: 'Wrong password' });
-    } catch {
+    } catch (error) {
         console.log(error);
         res.status(500).json({error, message: 'Internal Server Error'});
     }
