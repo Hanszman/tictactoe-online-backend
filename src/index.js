@@ -15,7 +15,7 @@ app.post('/signup', async (req, res) => {
     try {
         const { firstName, lastName, username, password } = req.body;
         const userId = uuidv4();
-        const hashedPassword = await bcrypt.hashSync(password, 10);
+        const hashedPassword = await bcrypt.hash(password, 10);
         const token = serverClient.createToken(userId);
         res.status(201).json({token, userId, firstName, lastName, username, hashedPassword});
     } catch (error) {
