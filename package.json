@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "description": "Multiplayer Online Tic Tac Toe developed in Node.js (BackEnd)",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Victor Hanszman",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3",
+    "uuid": "^10.0.0"
+  }
 }
