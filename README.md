@@ -1,7 +1,7 @@
 # tictactoe-online-backend
 Multiplayer Online Tic Tac Toe developed in Node.js (BackEnd)
 
-### Following the steps of this tutorial (01:26:51):
+### Following the steps of this tutorial (01:53:08):
 https://www.youtube.com/watch?v=Iw1YmBoOYb4&ab_channel=PedroTech
 
 ### Stream API:
