@@ -4,8 +4,8 @@ import { StreamChat } from 'stream-chat';
 import { v4 as uuidv4 } from 'uuid';
 import bcrypt from 'bcrypt';
 const app = express();
-const api_key = 'b52r7nyk5b8v';
-const api_secret = 'md8xy7wj9g36yc72yrkfk23rcquzrpz5y62yp7593w9h7jswxenq7jxujez2bnb5';
+const api_key = '';
+const api_secret = '';
 const serverClient = StreamChat.getInstance(api_key, api_secret);
 
 app.use(cors());
